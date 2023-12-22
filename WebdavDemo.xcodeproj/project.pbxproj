@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DF9DD4B2B3568D5005F918E /* WebdavDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4A2B3568D5005F918E /* WebdavDemoApp.swift */; };
+		4DF9DD4D2B3568D5005F918E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4C2B3568D5005F918E /* ContentView.swift */; };
+		4DF9DD4F2B3568D7005F918E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4E2B3568D7005F918E /* Assets.xcassets */; };
+		4DF9DD532B3568D7005F918E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF9DD522B3568D7005F918E /* Preview Assets.xcassets */; };
+		4DF9DD5D2B3568D7005F918E /* WebdavDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD5C2B3568D7005F918E /* WebdavDemoTests.swift */; };
+		4DF9DD672B3568D7005F918E /* WebdavDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD662B3568D7005F918E /* WebdavDemoUITests.swift */; };
+		4DF9DD692B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD682B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DF9DD592B3568D7005F918E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DF9DD3F2B3568D5005F918E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DF9DD462B3568D5005F918E;
+			remoteInfo = WebdavDemo;
+		};
+		4DF9DD632B3568D7005F918E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DF9DD3F2B3568D5005F918E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DF9DD462B3568D5005F918E;
+			remoteInfo = WebdavDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DF9DD472B3568D5005F918E /* WebdavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebdavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF9DD4A2B3568D5005F918E /* WebdavDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoApp.swift; sourceTree = "<group>"; };
+		4DF9DD4C2B3568D5005F918E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DF9DD4E2B3568D7005F918E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DF9DD502B3568D7005F918E /* WebdavDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebdavDemo.entitlements; sourceTree = "<group>"; };
+		4DF9DD522B3568D7005F918E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DF9DD582B3568D7005F918E /* WebdavDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebdavDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF9DD5C2B3568D7005F918E /* WebdavDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoTests.swift; sourceTree = "<group>"; };
+		4DF9DD622B3568D7005F918E /* WebdavDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebdavDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF9DD662B3568D7005F918E /* WebdavDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoUITests.swift; sourceTree = "<group>"; };
+		4DF9DD682B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DF9DD442B3568D5005F918E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF9DD552B3568D7005F918E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF9DD5F2B3568D7005F918E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DF9DD3E2B3568D5005F918E = {
+			isa = PBXGroup;
+			children = (
+				4DF9DD492B3568D5005F918E /* WebdavDemo */,
+				4DF9DD5B2B3568D7005F918E /* WebdavDemoTests */,
+				4DF9DD652B3568D7005F918E /* WebdavDemoUITests */,
+				4DF9DD482B3568D5005F918E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DF9DD482B3568D5005F918E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DF9DD472B3568D5005F918E /* WebdavDemo.app */,
+				4DF9DD582B3568D7005F918E /* WebdavDemoTests.xctest */,
+				4DF9DD622B3568D7005F918E /* WebdavDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DF9DD492B3568D5005F918E /* WebdavDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4DF9DD4A2B3568D5005F918E /* WebdavDemoApp.swift */,
+				4DF9DD4C2B3568D5005F918E /* ContentView.swift */,
+				4DF9DD4E2B3568D7005F918E /* Assets.xcassets */,
+				4DF9DD502B3568D7005F918E /* WebdavDemo.entitlements */,
+				4DF9DD512B3568D7005F918E /* Preview Content */,
+			);
+			path = WebdavDemo;
+			sourceTree = "<group>";
+		};
+		4DF9DD512B3568D7005F918E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4DF9DD522B3568D7005F918E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DF9DD5B2B3568D7005F918E /* WebdavDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DF9DD5C2B3568D7005F918E /* WebdavDemoTests.swift */,
+			);
+			path = WebdavDemoTests;
+			sourceTree = "<group>";
+		};
+		4DF9DD652B3568D7005F918E /* WebdavDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4DF9DD662B3568D7005F918E /* WebdavDemoUITests.swift */,
+				4DF9DD682B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift */,
+			);
+			path = WebdavDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DF9DD462B3568D5005F918E /* WebdavDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DF9DD6C2B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemo" */;
+			buildPhases = (
+				4DF9DD432B3568D5005F918E /* Sources */,
+				4DF9DD442B3568D5005F918E /* Frameworks */,
+				4DF9DD452B3568D5005F918E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebdavDemo;
+			productName = WebdavDemo;
+			productReference = 4DF9DD472B3568D5005F918E /* WebdavDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DF9DD572B3568D7005F918E /* WebdavDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DF9DD6F2B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoTests" */;
+			buildPhases = (
+				4DF9DD542B3568D7005F918E /* Sources */,
+				4DF9DD552B3568D7005F918E /* Frameworks */,
+				4DF9DD562B3568D7005F918E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DF9DD5A2B3568D7005F918E /* PBXTargetDependency */,
+			);
+			name = WebdavDemoTests;
+			productName = WebdavDemoTests;
+			productReference = 4DF9DD582B3568D7005F918E /* WebdavDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4DF9DD612B3568D7005F918E /* WebdavDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DF9DD722B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoUITests" */;
+			buildPhases = (
+				4DF9DD5E2B3568D7005F918E /* Sources */,
+				4DF9DD5F2B3568D7005F918E /* Frameworks */,
+				4DF9DD602B3568D7005F918E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DF9DD642B3568D7005F918E /* PBXTargetDependency */,
+			);
+			name = WebdavDemoUITests;
+			productName = WebdavDemoUITests;
+			productReference = 4DF9DD622B3568D7005F918E /* WebdavDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DF9DD3F2B3568D5005F918E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4DF9DD462B3568D5005F918E = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					4DF9DD572B3568D7005F918E = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 4DF9DD462B3568D5005F918E;
+					};
+					4DF9DD612B3568D7005F918E = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 4DF9DD462B3568D5005F918E;
+					};
+				};
+			};
+			buildConfigurationList = 4DF9DD422B3568D5005F918E /* Build configuration list for PBXProject "WebdavDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DF9DD3E2B3568D5005F918E;
+			productRefGroup = 4DF9DD482B3568D5005F918E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DF9DD462B3568D5005F918E /* WebdavDemo */,
+				4DF9DD572B3568D7005F918E /* WebdavDemoTests */,
+				4DF9DD612B3568D7005F918E /* WebdavDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DF9DD452B3568D5005F918E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF9DD532B3568D7005F918E /* Preview Assets.xcassets in Resources */,
+				4DF9DD4F2B3568D7005F918E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF9DD562B3568D7005F918E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF9DD602B3568D7005F918E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DF9DD432B3568D5005F918E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF9DD4D2B3568D5005F918E /* ContentView.swift in Sources */,
+				4DF9DD4B2B3568D5005F918E /* WebdavDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF9DD542B3568D7005F918E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF9DD5D2B3568D7005F918E /* WebdavDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF9DD5E2B3568D7005F918E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF9DD692B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift in Sources */,
+				4DF9DD672B3568D7005F918E /* WebdavDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DF9DD5A2B3568D7005F918E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DF9DD462B3568D5005F918E /* WebdavDemo */;
+			targetProxy = 4DF9DD592B3568D7005F918E /* PBXContainerItemProxy */;
+		};
+		4DF9DD642B3568D7005F918E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DF9DD462B3568D5005F918E /* WebdavDemo */;
+			targetProxy = 4DF9DD632B3568D7005F918E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4DF9DD6A2B3568D7005F918E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DF9DD6B2B3568D7005F918E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		4DF9DD6D2B3568D7005F918E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebdavDemo/WebdavDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WebdavDemo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DF9DD6E2B3568D7005F918E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebdavDemo/WebdavDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WebdavDemo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4DF9DD702B3568D7005F918E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebdavDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WebdavDemo";
+			};
+			name = Debug;
+		};
+		4DF9DD712B3568D7005F918E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebdavDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WebdavDemo";
+			};
+			name = Release;
+		};
+		4DF9DD732B3568D7005F918E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WebdavDemo;
+			};
+			name = Debug;
+		};
+		4DF9DD742B3568D7005F918E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WebdavDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DF9DD422B3568D5005F918E /* Build configuration list for PBXProject "WebdavDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DF9DD6A2B3568D7005F918E /* Debug */,
+				4DF9DD6B2B3568D7005F918E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DF9DD6C2B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DF9DD6D2B3568D7005F918E /* Debug */,
+				4DF9DD6E2B3568D7005F918E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DF9DD6F2B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DF9DD702B3568D7005F918E /* Debug */,
+				4DF9DD712B3568D7005F918E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DF9DD722B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DF9DD732B3568D7005F918E /* Debug */,
+				4DF9DD742B3568D7005F918E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DF9DD3F2B3568D5005F918E /* Project object */;
+}
