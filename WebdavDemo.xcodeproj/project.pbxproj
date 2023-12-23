@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4DFA222B36944D005D2819 /* WebDAVSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */; };
+		4D4DFA232B36944E005D2819 /* WebDAVSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */; };
+		4D4DFA252B36983F005D2819 /* FileListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA242B36983F005D2819 /* FileListPage.swift */; };
+		4D4DFA262B36983F005D2819 /* FileListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA242B36983F005D2819 /* FileListPage.swift */; };
 		4DF9DD4B2B3568D5005F918E /* WebdavDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4A2B3568D5005F918E /* WebdavDemoApp.swift */; };
 		4DF9DD4D2B3568D5005F918E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4C2B3568D5005F918E /* ContentView.swift */; };
 		4DF9DD4F2B3568D7005F918E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4E2B3568D7005F918E /* Assets.xcassets */; };
@@ -14,6 +18,7 @@
 		4DF9DD5D2B3568D7005F918E /* WebdavDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD5C2B3568D7005F918E /* WebdavDemoTests.swift */; };
 		4DF9DD672B3568D7005F918E /* WebdavDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD662B3568D7005F918E /* WebdavDemoUITests.swift */; };
 		4DF9DD692B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD682B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift */; };
+		4DF9DD772B357545005F918E /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF9DD762B357545005F918E /* SWXMLHash */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDAVSetupModel.swift; sourceTree = "<group>"; };
+		4D4DFA242B36983F005D2819 /* FileListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListPage.swift; sourceTree = "<group>"; };
 		4DF9DD472B3568D5005F918E /* WebdavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebdavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF9DD4A2B3568D5005F918E /* WebdavDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoApp.swift; sourceTree = "<group>"; };
 		4DF9DD4C2B3568D5005F918E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF9DD772B357545005F918E /* SWXMLHash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +105,8 @@
 			children = (
 				4DF9DD4A2B3568D5005F918E /* WebdavDemoApp.swift */,
 				4DF9DD4C2B3568D5005F918E /* ContentView.swift */,
+				4D4DFA242B36983F005D2819 /* FileListPage.swift */,
+				4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */,
 				4DF9DD4E2B3568D7005F918E /* Assets.xcassets */,
 				4DF9DD502B3568D7005F918E /* WebdavDemo.entitlements */,
 				4DF9DD512B3568D7005F918E /* Preview Content */,
@@ -145,6 +155,9 @@
 			dependencies = (
 			);
 			name = WebdavDemo;
+			packageProductDependencies = (
+				4DF9DD762B357545005F918E /* SWXMLHash */,
+			);
 			productName = WebdavDemo;
 			productReference = 4DF9DD472B3568D5005F918E /* WebdavDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +230,9 @@
 				Base,
 			);
 			mainGroup = 4DF9DD3E2B3568D5005F918E;
+			packageReferences = (
+				4DF9DD752B357545005F918E /* XCRemoteSwiftPackageReference "SWXMLHash" */,
+			);
 			productRefGroup = 4DF9DD482B3568D5005F918E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +277,8 @@
 			files = (
 				4DF9DD4D2B3568D5005F918E /* ContentView.swift in Sources */,
 				4DF9DD4B2B3568D5005F918E /* WebdavDemoApp.swift in Sources */,
+				4D4DFA252B36983F005D2819 /* FileListPage.swift in Sources */,
+				4D4DFA222B36944D005D2819 /* WebDAVSetupModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4DFA232B36944E005D2819 /* WebDAVSetupModel.swift in Sources */,
 				4DF9DD5D2B3568D7005F918E /* WebdavDemoTests.swift in Sources */,
+				4D4DFA262B36983F005D2819 /* FileListPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WebdavDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7WS42S6435;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -456,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WebdavDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7WS42S6435;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -609,6 +631,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DF9DD752B357545005F918E /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/drmohundro/SWXMLHash.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DF9DD762B357545005F918E /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DF9DD752B357545005F918E /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DF9DD3F2B3568D5005F918E /* Project object */;
 }
