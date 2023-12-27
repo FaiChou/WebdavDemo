@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0538452B3C54F6000D4193 /* WebDAV+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0538442B3C54F6000D4193 /* WebDAV+Image.swift */; };
 		4D4DFA222B36944D005D2819 /* WebDAVSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */; };
 		4D4DFA232B36944E005D2819 /* WebDAVSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */; };
 		4D4DFA252B36983F005D2819 /* FileListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA242B36983F005D2819 /* FileListPage.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0538442B3C54F6000D4193 /* WebDAV+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebDAV+Image.swift"; sourceTree = "<group>"; };
 		4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDAVSetupModel.swift; sourceTree = "<group>"; };
 		4D4DFA242B36983F005D2819 /* FileListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListPage.swift; sourceTree = "<group>"; };
 		4DCB23972B3C06880085FF2A /* WebDAV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDAV.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				4DCB23972B3C06880085FF2A /* WebDAV.swift */,
 				4DCB239B2B3C06880085FF2A /* WebDAVError.swift */,
 				4DCB239D2B3C06880085FF2A /* WebDAVFile.swift */,
+				4D0538442B3C54F6000D4193 /* WebDAV+Image.swift */,
 			);
 			path = WebDAV;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				4DCB23AE2B3C06880085FF2A /* WebDAVError.swift in Sources */,
 				4DF9DD4B2B3568D5005F918E /* WebdavDemoApp.swift in Sources */,
 				4DCB23B22B3C06880085FF2A /* WebDAVFile.swift in Sources */,
+				4D0538452B3C54F6000D4193 /* WebDAV+Image.swift in Sources */,
 				4D4DFA252B36983F005D2819 /* FileListPage.swift in Sources */,
 				4D4DFA222B36944D005D2819 /* WebDAVSetupModel.swift in Sources */,
 				4DCB23A82B3C06880085FF2A /* HTTPMethod.swift in Sources */,

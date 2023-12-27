@@ -40,19 +40,19 @@ public class WebDAV: NSObject, URLSessionDelegate {
         if foldersFirst {
             files = files.filter { $0.isDirectory } + files.filter { !$0.isDirectory }
         }
+        files = files.filter { !$0.fileName.hasPrefix(".") }
         return files
     }
 }
 
 public extension WebDAV {
-    @discardableResult
     func listFiles(atPath path: String, foldersFirst: Bool = true, includeSelf: Bool = false) async throws -> [WebDAVFile] {
         guard var request = authorizedRequest(path: path, method: .propfind) else {
             throw WebDAVError.invalidCredentials
         }
         let body =
 """
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <D:propfind xmlns:D="DAV:">
     <D:prop>
         <D:getcontentlength/>
@@ -73,7 +73,8 @@ public extension WebDAV {
             let xml = XMLHash.config { config in
                 config.shouldProcessNamespaces = true
             }.parse(string)
-            let files = xml["multistatus"]["response"].all.compactMap { WebDAVFile(xml: $0, baseURL: self.baseURL.absoluteString) }
+//            print(xml)
+            let files = xml["multistatus"]["response"].all.compactMap { WebDAVFile(xml: $0, baseURL: self.baseURL, auth: self.auth) }
             let sortedFiles = WebDAV.sortedFiles(files, foldersFirst: foldersFirst, includeSelf: includeSelf)
             return sortedFiles
         } catch {
@@ -107,7 +108,8 @@ extension WebDAV {
         let url = self.baseURL.appendingPathComponent(path)
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        request.addValue("Basic \(self.auth)", forHTTPHeaderField: "Authorization")
+        request.setValue("Basic \(self.auth)", forHTTPHeaderField: "Authorization")
+        request.setValue("1", forHTTPHeaderField: "Depth")
         return request
     }
 }
