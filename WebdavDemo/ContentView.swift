@@ -15,12 +15,8 @@ struct ContentView: View {
             NavigationView {
                 Form {
                     Section(header: Text("Basic")) {
-                        Picker("Protocol", selection: $model.webdavProtocol) {
-                            Text("WebDAV").tag(WebDAVProtocol.HTTP)
-                            Text("WebDAV(HTTPS)").tag(WebDAVProtocol.HTTPS)
-                        }
                         TextField("Name", text: $model.name)
-                        TextField("192.168.11.199", text: $model.address)
+                        TextField("http[s]://192.168.11.199", text: $model.address)
                         TextField("Username", text: $model.username)
                         SecureField("Password", text: $model.password)
                     }
@@ -30,19 +26,21 @@ struct ContentView: View {
                         TextField("Path, eg: /subfolder", text: $model.path)
                     }
                     Button("Submit") {
+                        guard !model.address.isEmpty else {
+                            return
+                        }
                         presentedListPage = [1]
-                    }
-                }
-                .onChange(of: model.webdavProtocol) { _, newValue in
-                    switch newValue {
-                    case .HTTP:
-                        model.port = 80
-                    case .HTTPS:
-                        model.port = 443
+                        WebDAV(baseURL: model.address,
+                                            port: model.port,
+                                            username: model.username,
+                                            password: model.password,
+                                            path: model.path).listFiles(atPath: "/") { files, error in
+                            print(files)
+                        }
                     }
                 }
                 .onChange(of: presentedListPage) { oldValue, newValue in
-                    print(oldValue, newValue)
+//                    print(oldValue, newValue)
                 }
             }
             .navigationDestination(for: Int.self) { _ in
