@@ -5,7 +5,7 @@
 //  Created by Isaac Lyons on 10/29/20.
 //
 
-import UIKit
+import Foundation
 import SWXMLHash
 
 public class WebDAV: NSObject, URLSessionDelegate {
@@ -44,16 +44,12 @@ public class WebDAV: NSObject, URLSessionDelegate {
     }
 }
 
-//MARK: Public
-
 public extension WebDAV {
     @discardableResult
-    func listFiles(atPath path: String, foldersFirst: Bool = true, includeSelf: Bool = false, completion: @escaping (_ files: [WebDAVFile]?, _ error: WebDAVError?) -> Void) -> URLSessionDataTask? {
+    func listFiles(atPath path: String, foldersFirst: Bool = true, includeSelf: Bool = false) async throws -> [WebDAVFile] {
         guard var request = authorizedRequest(path: path, method: .propfind) else {
-            completion(nil, .invalidCredentials)
-            return nil
+            throw WebDAVError.invalidCredentials
         }
-
         let body =
 """
 <?xml version="1.0"?>
@@ -67,136 +63,38 @@ public extension WebDAV {
 </D:propfind>
 """
         request.httpBody = body.data(using: .utf8)
-        let task = URLSession(configuration: .ephemeral, delegate: self, delegateQueue: nil).dataTask(with: request) { [weak self] data, response, error in
-            let error = WebDAVError.getError(response: response, error: error)
-            // Check the response
-            let response = response as? HTTPURLResponse
-            guard 200...299 ~= response?.statusCode ?? 0,
-                  let data = data,
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let response = response as? HTTPURLResponse,
+                  200...299 ~= response.statusCode,
                   let string = String(data: data, encoding: .utf8) else {
-                return completion(nil, error)
+                throw WebDAVError.getError(response: response, error: nil) ?? WebDAVError.unsupported
             }
-            // Create WebDAVFiles from the XML response
             let xml = XMLHash.config { config in
                 config.shouldProcessNamespaces = true
             }.parse(string)
-//            print(xml)
-            let files = xml["multistatus"]["response"].all.compactMap { WebDAVFile(xml: $0, baseURL: self!.baseURL.absoluteString) }
+            let files = xml["multistatus"]["response"].all.compactMap { WebDAVFile(xml: $0, baseURL: self.baseURL.absoluteString) }
             let sortedFiles = WebDAV.sortedFiles(files, foldersFirst: foldersFirst, includeSelf: includeSelf)
-            completion(sortedFiles, error)
+            return sortedFiles
+        } catch {
+            throw WebDAVError.nsError(error)
         }
-        task.resume()
-        return task
     }
-    
-    /// Upload data to the specified file path.
-    /// - Parameters:
-    ///   - data: The data of the file to upload.
-    ///   - path: The path, including file name and extension, to upload the file to.
-    ///   - account: The WebDAV account.
-    ///   - password: The WebDAV account's password.
-    ///   - completion: If account properties are invalid, this will run immediately on the same thread.
-    ///   Otherwise, it runs when the network call finishes on a background thread.
-    ///   - error: A WebDAVError if the call was unsuccessful. `nil` if it was.
-    /// - Returns: The upload task for the request.
-    @discardableResult
-    func upload(data: Data, toPath path: String, completion: @escaping (_ error: WebDAVError?) -> Void) -> URLSessionUploadTask? {
-        guard let request = authorizedRequest(path: path, method: .put) else {
-            completion(.invalidCredentials)
-            return nil
+    func deleteFile(atPath path: String) async throws -> Bool {
+        guard let request = authorizedRequest(path: path, method: .delete) else {
+            throw WebDAVError.invalidCredentials
         }
-        let task = URLSession(configuration: .ephemeral, delegate: self, delegateQueue: nil).uploadTask(with: request, from: data) { _, response, error in
-            completion(WebDAVError.getError(response: response, error: error))
+        do {
+            let (_, response) = try await URLSession.shared.data(for: request)
+            guard let response = response as? HTTPURLResponse else {
+                return false
+            }
+            return 200...299 ~= response.statusCode
+        } catch {
+            throw WebDAVError.nsError(error)
         }
-        
-        task.resume()
-        return task
-    }
-    /// Upload a file to the specified file path.
-    /// - Parameters:
-    ///   - file: The path to the file to upload.
-    ///   - path: The path, including file name and extension, to upload the file to.
-    ///   - account: The WebDAV account.
-    ///   - password: The WebDAV account's password.
-    ///   - completion: If account properties are invalid, this will run immediately on the same thread.
-    ///   Otherwise, it runs when the network call finishes on a background thread.
-    ///   - error: A WebDAVError if the call was unsuccessful. `nil` if it was.
-    /// - Returns: The upload task for the request.
-    @discardableResult
-    func upload(file: URL, toPath path: String, completion: @escaping (_ error: WebDAVError?) -> Void) -> URLSessionUploadTask? {
-        guard let request = authorizedRequest(path: path, method: .put) else {
-            completion(.invalidCredentials)
-            return nil
-        }
-        
-        let task = URLSession(configuration: .ephemeral, delegate: self, delegateQueue: nil).uploadTask(with: request, fromFile: file) { _, response, error in
-            completion(WebDAVError.getError(response: response, error: error))
-        }
-        
-        task.resume()
-        return task
-    }
-    
-    /// Create a folder at the specified path
-    /// - Parameters:
-    ///   - path: The path to create a folder at.
-    ///   - account: The WebDAV account.
-    ///   - password: The WebDAV account's password.
-    ///   - completion: If account properties are invalid, this will run immediately on the same thread.
-    ///   Otherwise, it runs when the network call finishes on a background thread.
-    ///   - error: A WebDAVError if the call was unsuccessful. `nil` if it was.
-    /// - Returns: The data task for the request.
-    @discardableResult
-    func createFolder(atPath path: String, completion: @escaping (_ error: WebDAVError?) -> Void) -> URLSessionDataTask? {
-        basicDataTask(path: path, method: .mkcol, completion: completion)
-    }
-    
-    /// Delete the file or folder at the specified path.
-    /// - Parameters:
-    ///   - path: The path of the file or folder to delete.
-    ///   - account: The WebDAV account.
-    ///   - password: The WebDAV account's password.
-    ///   - completion: If account properties are invalid, this will run immediately on the same thread.
-    ///   Otherwise, it runs when the network call finishes on a background thread.
-    ///   - error: A WebDAVError if the call was unsuccessful. `nil` if it was.
-    /// - Returns: The data task for the request.
-    @discardableResult
-    func deleteFile(atPath path: String, completion: @escaping (_ error: WebDAVError?) -> Void) -> URLSessionDataTask? {
-        basicDataTask(path: path, method: .delete, completion: completion)
-    }
-    
-    /// Move the file to the specified destination.
-    /// - Parameters:
-    ///   - path: The original path of the file.
-    ///   - destination: The desired destination path of the file.
-    ///   - account: The WebDAV account.
-    ///   - password: The WebDAV account's password.
-    ///   - completion: If account properties are invalid, this will run immediately on the same thread.
-    ///   Otherwise, it runs when the network call finishes on a background thread.
-    ///   - error: A WebDAVError if the call was unsuccessful. `nil` if it was.
-    /// - Returns: The data task for the request.
-    @discardableResult
-    func moveFile(fromPath path: String, to destination: String, completion: @escaping (_ error: WebDAVError?) -> Void) -> URLSessionDataTask? {
-        basicDataTask(path: path, destination: destination, method: .move, completion: completion)
-    }
-    
-    /// Copy the file to the specified destination.
-    /// - Parameters:
-    ///   - path: The original path of the file.
-    ///   - destination: The desired destination path of the copy.
-    ///   - account: The WebDAV account.
-    ///   - password: The WebDAV account's password.
-    ///   - completion: If account properties are invalid, this will run immediately on the same thread.
-    ///   Otherwise, it runs when the network call finishes on a background thread.
-    ///   - error: A WebDAVError if the call was unsuccessful. `nil` if it was.
-    /// - Returns: The data task for the request.
-    @discardableResult
-    func copyFile(fromPath path: String, to destination: String, completion: @escaping (_ error: WebDAVError?) -> Void) -> URLSessionDataTask? {
-        basicDataTask(path: path, destination: destination, method: .copy, completion: completion)
     }
 }
-
-//MARK: Internal
 
 extension WebDAV {
     /// Creates an authorized URL request at the path and with the HTTP method specified.
@@ -211,21 +109,5 @@ extension WebDAV {
         request.httpMethod = method.rawValue
         request.addValue("Basic \(self.auth)", forHTTPHeaderField: "Authorization")
         return request
-    }
-
-    func basicDataTask(path: String, destination: String? = nil, method: HTTPMethod, completion: @escaping (_ error: WebDAVError?) -> Void) -> URLSessionDataTask? {
-        guard var request = authorizedRequest(path: path, method: method) else {
-            completion(.invalidCredentials)
-            return nil
-        }
-        if let destination = destination {
-            let destionationURL = self.baseURL.appendingPathComponent(destination)
-            request.addValue(destionationURL.absoluteString, forHTTPHeaderField: "Destination")
-        }
-        let task = URLSession(configuration: .ephemeral, delegate: self, delegateQueue: nil).dataTask(with: request) { data, response, error in
-            completion(WebDAVError.getError(response: response, error: error))
-        }
-        task.resume()
-        return task
     }
 }

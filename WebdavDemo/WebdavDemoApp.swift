@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct WebdavDemoApp: App {
+    @StateObject private var model = WebDAVSetupModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(model)
         }
     }
 }

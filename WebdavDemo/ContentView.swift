@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var model = WebDAVSetupModel()
-    @State private var presentedListPage: [Int] = []
+    @EnvironmentObject var model: WebDAVSetupModel
+    @State private var presentedListPage: [String] = []
     var body: some View {
         NavigationStack(path: $presentedListPage) {
             NavigationView {
@@ -31,24 +31,18 @@ struct ContentView: View {
                     }
                     Button("Submit") {
                         guard !model.address.isEmpty else {
+                            print("INVALID ADDRESS")
                             return
                         }
-                        presentedListPage = [1]
-                        WebDAV(baseURL: model.address,
-                                            port: model.port,
-                                            username: model.username,
-                                            password: model.password,
-                                            path: model.path).listFiles(atPath: "/") { files, error in
-                            print(files)
-                        }
+                        presentedListPage = ["/"]
                     }
                 }
                 .onChange(of: presentedListPage) { oldValue, newValue in
 //                    print(oldValue, newValue)
                 }
             }
-            .navigationDestination(for: Int.self) { _ in
-                FileListPage()
+            .navigationDestination(for: String.self) { path in
+                FileListPage(path: path)
             }
         }
     }
