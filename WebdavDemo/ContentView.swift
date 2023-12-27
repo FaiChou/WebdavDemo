@@ -21,8 +21,12 @@ struct ContentView: View {
                         SecureField("Password", text: $model.password)
                     }
                     Section(header: Text("Advanced")) {
+                        #if os(macOS)
+                        TextField("Port", value: $model.port, formatter: NumberFormatter())
+                        #else
                         TextField("Port", value: $model.port, formatter: NumberFormatter())
                             .keyboardType(.numberPad)
+                        #endif
                         TextField("Path, eg: /subfolder", text: $model.path)
                     }
                     Button("Submit") {
