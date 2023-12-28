@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-public struct AsyncImageWithAuth<Content: View, Placeholder: View>: View {
+struct AsyncImageWithAuth<Content: View, Placeholder: View>: View {
     @State var uiImage: UIImage?
 
     let file: WebDAVFile
     let content: (Image) -> Content
     let placeholder: () -> Placeholder
     
-    public init(
+    init(
         file: WebDAVFile,
         @ViewBuilder content: @escaping (Image) -> Content,
         @ViewBuilder placeholder: @escaping () -> Placeholder
@@ -23,7 +23,7 @@ public struct AsyncImageWithAuth<Content: View, Placeholder: View>: View {
         self.content = content
         self.placeholder = placeholder
     }
-    public var body: some View {
+    var body: some View {
         if let uiImage = uiImage {
             content(Image(uiImage: uiImage))
         } else {

@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public class WebDAV: NSObject, URLSessionDelegate {
+class WebDAV {
     var baseURL: URL
     var auth: String
     init(baseURL: String, port: Int, username: String? = nil, password: String? = nil, path: String? = nil) {
@@ -45,7 +45,7 @@ public class WebDAV: NSObject, URLSessionDelegate {
     }
 }
 
-public extension WebDAV {
+extension WebDAV {
     func ping() async -> Bool {
         do {
             let _ = try await listFiles(atPath: "/")
@@ -109,7 +109,6 @@ extension WebDAV {
     /// Creates an authorized URL request at the path and with the HTTP method specified.
     /// - Parameters:
     ///   - path: The path of the request
-    ///   - account: The WebDAV account
     ///   - method: The HTTP Method for the request.
     /// - Returns: The URL request if the credentials are valid (can be encoded as UTF-8).
     func authorizedRequest(path: String, method: HTTPMethod) -> URLRequest? {

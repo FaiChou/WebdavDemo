@@ -18,10 +18,15 @@ struct Home: View {
                     FileListPage(drive: item, path: "/")
                 } label: {
                     HStack {
+                        Image(item.driveType == .WebDAV ? "webdav" : "samba")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
                         VStack(alignment: .leading) {
                             Text(item.alias)
                             Text(item.driveDetail)
                                 .foregroundStyle(.secondary)
+                                .font(.footnote)
                         }
                         Spacer()
                     }

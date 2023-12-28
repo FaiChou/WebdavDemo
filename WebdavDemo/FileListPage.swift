@@ -40,9 +40,23 @@ struct FileListPage: View {
                 }
             } label: {
                 HStack {
-                    Text(item.fileName)
+                    Image(item.isDirectory ? "folder" : "file")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 40)
+                        .padding(.trailing, 5)
+                    VStack(alignment: .leading) {
+                        Text(item.fileName)
+                        Text(item.lastModified.formatted())
+                            .foregroundStyle(.secondary)
+                            .font(.footnote)
+                    }
                     Spacer()
-                    Text("\(item.size)")
+                    if !item.isDirectory {
+                        Text(ByteCountFormatter().string(fromByteCount: item.size))
+                            .foregroundStyle(.secondary)
+                            .font(.caption)
+                    }
                 }
             }
         }

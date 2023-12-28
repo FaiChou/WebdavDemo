@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum WebDAVError: Error {
+enum WebDAVError: Error {
     /// The credentials or path were unable to be encoded.
     /// No network request was called.
     case invalidCredentials
@@ -21,7 +21,7 @@ public enum WebDAVError: Error {
     case nsError(Error)
     /// The returned value is simply a placeholder.
     case placeholder
-    
+
     static func getError(statusCode: Int?, error: Error?) -> WebDAVError? {
         if let statusCode = statusCode {
             switch statusCode {
@@ -35,13 +35,13 @@ public enum WebDAVError: Error {
                 break
             }
         }
-        
+    
         if let error = error {
             return .nsError(error)
         }
         return nil
     }
-    
+
     static func getError(response: URLResponse?, error: Error?) -> WebDAVError? {
         getError(statusCode: (response as? HTTPURLResponse)?.statusCode, error: error)
     }
