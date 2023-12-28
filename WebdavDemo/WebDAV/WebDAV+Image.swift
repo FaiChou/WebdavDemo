@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct AsyncImageWithAuth<Content: View, Placeholder: View>: View {
     @State var uiImage: UIImage?
-    
+
     let file: WebDAVFile
     let content: (Image) -> Content
     let placeholder: () -> Placeholder
