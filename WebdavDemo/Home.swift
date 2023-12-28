@@ -15,7 +15,7 @@ struct Home: View {
         NavigationStack(path: $presentedPage) {
             List(model.drives, id: \.self) { item in
                 NavigationLink {
-//                        FileListPage()
+                    FileListPage(drive: item, path: "/")
                 } label: {
                     HStack {
                         VStack(alignment: .leading) {

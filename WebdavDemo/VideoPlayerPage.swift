@@ -26,6 +26,7 @@ struct VideoPlayerPage: View {
             let asset = AVURLAsset(url: file.url, options: ["AVURLAssetHTTPHeaderFieldsKey": headers])
             let playerItem = AVPlayerItem(asset: asset)
             player = AVPlayer(playerItem: playerItem)
+            player?.play()
         }
         .ignoresSafeArea()
     }

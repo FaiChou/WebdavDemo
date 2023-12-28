@@ -14,8 +14,6 @@
 		4D0ADF2E2B3D567A0068BC56 /* DriveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF2D2B3D567A0068BC56 /* DriveModel.swift */; };
 		4D0ADF2F2B3D567A0068BC56 /* DriveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF2D2B3D567A0068BC56 /* DriveModel.swift */; };
 		4D0ADF312B3D5B590068BC56 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF302B3D5B590068BC56 /* Home.swift */; };
-		4D4DFA222B36944D005D2819 /* WebDAVSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */; };
-		4D4DFA232B36944E005D2819 /* WebDAVSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */; };
 		4D4DFA252B36983F005D2819 /* FileListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA242B36983F005D2819 /* FileListPage.swift */; };
 		4D4DFA262B36983F005D2819 /* FileListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA242B36983F005D2819 /* FileListPage.swift */; };
 		4DCB23A62B3C06880085FF2A /* WebDAV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB23972B3C06880085FF2A /* WebDAV.swift */; };
@@ -59,7 +57,6 @@
 		4D0ADF2A2B3D551E0068BC56 /* DriveListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveListModel.swift; sourceTree = "<group>"; };
 		4D0ADF2D2B3D567A0068BC56 /* DriveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveModel.swift; sourceTree = "<group>"; };
 		4D0ADF302B3D5B590068BC56 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDAVSetupModel.swift; sourceTree = "<group>"; };
 		4D4DFA242B36983F005D2819 /* FileListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListPage.swift; sourceTree = "<group>"; };
 		4DCB23972B3C06880085FF2A /* WebDAV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDAV.swift; sourceTree = "<group>"; };
 		4DCB23982B3C06880085FF2A /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -110,7 +107,6 @@
 			children = (
 				4D0ADF2D2B3D567A0068BC56 /* DriveModel.swift */,
 				4D0ADF2A2B3D551E0068BC56 /* DriveListModel.swift */,
-				4D4DFA212B36944D005D2819 /* WebDAVSetupModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,7 +331,6 @@
 				4D0ADF312B3D5B590068BC56 /* Home.swift in Sources */,
 				4D0ADF292B3D23FA0068BC56 /* VideoPlayerPage.swift in Sources */,
 				4D4DFA252B36983F005D2819 /* FileListPage.swift in Sources */,
-				4D4DFA222B36944D005D2819 /* WebDAVSetupModel.swift in Sources */,
 				4D0ADF2B2B3D551E0068BC56 /* DriveListModel.swift in Sources */,
 				4D0ADF2E2B3D567A0068BC56 /* DriveModel.swift in Sources */,
 				4DCB23A82B3C06880085FF2A /* HTTPMethod.swift in Sources */,
@@ -348,7 +343,6 @@
 			files = (
 				4DCB23A72B3C06880085FF2A /* WebDAV.swift in Sources */,
 				4D0ADF2F2B3D567A0068BC56 /* DriveModel.swift in Sources */,
-				4D4DFA232B36944E005D2819 /* WebDAVSetupModel.swift in Sources */,
 				4DCB23AF2B3C06880085FF2A /* WebDAVError.swift in Sources */,
 				4DCB23A92B3C06880085FF2A /* HTTPMethod.swift in Sources */,
 				4DF9DD5D2B3568D7005F918E /* WebdavDemoTests.swift in Sources */,

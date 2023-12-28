@@ -9,18 +9,27 @@ import Foundation
 import SwiftUI
 
 struct FileListPage: View {
-    @EnvironmentObject var model: WebDAVSetupModel
+    let drive: DriveModel
     let path: String
     @State private var data: [WebDAVFile] = []
-    @State private var webdav: WebDAV?
+    private let webdav: WebDAV
+    init(drive: DriveModel, path: String) {
+        self.drive = drive
+        self.path = path
+        webdav = WebDAV(baseURL: drive.address,
+                        port: drive.port,
+                        username: drive.username,
+                        password: drive.password,
+                        path: drive.path)
+    }
     var body: some View {
         List(data) { item in
             NavigationLink {
                 if item.isDirectory {
-                    FileListPage(path: item.path)
+                    FileListPage(drive: drive, path: item.path)
                 } else if item.extension == "png" {
                     AsyncImageWithAuth(file: item) { image in
-                        image.resizable()
+                        image.resizable().scaledToFit()
                     } placeholder: {
                         Text(item.fileName)
                     }
@@ -40,20 +49,15 @@ struct FileListPage: View {
         .refreshable {
             loadData()
         }
-        .navigationTitle("WebDAV")
+        .navigationTitle(path == "/" ? "root" : path)
         .onAppear {
-            webdav = WebDAV(baseURL: model.address,
-                                 port: model.port,
-                                 username: model.username,
-                                 password: model.password,
-                                 path: model.path)
             loadData()
         }
     }
     private func loadData() {
         Task {
             do {
-                data = try await webdav!.listFiles(atPath: path)
+                data = try await webdav.listFiles(atPath: path)
             } catch {
                 print("error=\(error)")
             }
