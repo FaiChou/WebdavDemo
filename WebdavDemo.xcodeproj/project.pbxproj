@@ -10,46 +10,19 @@
 		4D0538452B3C54F6000D4193 /* WebDAV+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0538442B3C54F6000D4193 /* WebDAV+Image.swift */; };
 		4D0ADF292B3D23FA0068BC56 /* VideoPlayerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF282B3D23FA0068BC56 /* VideoPlayerPage.swift */; };
 		4D0ADF2B2B3D551E0068BC56 /* DriveListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF2A2B3D551E0068BC56 /* DriveListModel.swift */; };
-		4D0ADF2C2B3D55220068BC56 /* DriveListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF2A2B3D551E0068BC56 /* DriveListModel.swift */; };
 		4D0ADF2E2B3D567A0068BC56 /* DriveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF2D2B3D567A0068BC56 /* DriveModel.swift */; };
-		4D0ADF2F2B3D567A0068BC56 /* DriveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF2D2B3D567A0068BC56 /* DriveModel.swift */; };
 		4D0ADF312B3D5B590068BC56 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0ADF302B3D5B590068BC56 /* Home.swift */; };
 		4D4DFA252B36983F005D2819 /* FileListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA242B36983F005D2819 /* FileListPage.swift */; };
-		4D4DFA262B36983F005D2819 /* FileListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DFA242B36983F005D2819 /* FileListPage.swift */; };
 		4DCB23A62B3C06880085FF2A /* WebDAV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB23972B3C06880085FF2A /* WebDAV.swift */; };
-		4DCB23A72B3C06880085FF2A /* WebDAV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB23972B3C06880085FF2A /* WebDAV.swift */; };
 		4DCB23A82B3C06880085FF2A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB23982B3C06880085FF2A /* HTTPMethod.swift */; };
-		4DCB23A92B3C06880085FF2A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB23982B3C06880085FF2A /* HTTPMethod.swift */; };
 		4DCB23AE2B3C06880085FF2A /* WebDAVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB239B2B3C06880085FF2A /* WebDAVError.swift */; };
-		4DCB23AF2B3C06880085FF2A /* WebDAVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB239B2B3C06880085FF2A /* WebDAVError.swift */; };
 		4DCB23B22B3C06880085FF2A /* WebDAVFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB239D2B3C06880085FF2A /* WebDAVFile.swift */; };
-		4DCB23B32B3C06880085FF2A /* WebDAVFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB239D2B3C06880085FF2A /* WebDAVFile.swift */; };
 		4DF9DD4B2B3568D5005F918E /* WebdavDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4A2B3568D5005F918E /* WebdavDemoApp.swift */; };
 		4DF9DD4D2B3568D5005F918E /* DriveSetupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4C2B3568D5005F918E /* DriveSetupPage.swift */; };
 		4DF9DD4F2B3568D7005F918E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF9DD4E2B3568D7005F918E /* Assets.xcassets */; };
 		4DF9DD532B3568D7005F918E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF9DD522B3568D7005F918E /* Preview Assets.xcassets */; };
-		4DF9DD5D2B3568D7005F918E /* WebdavDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD5C2B3568D7005F918E /* WebdavDemoTests.swift */; };
-		4DF9DD672B3568D7005F918E /* WebdavDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD662B3568D7005F918E /* WebdavDemoUITests.swift */; };
-		4DF9DD692B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9DD682B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift */; };
 		4DF9DD772B357545005F918E /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF9DD762B357545005F918E /* SWXMLHash */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4DF9DD592B3568D7005F918E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DF9DD3F2B3568D5005F918E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DF9DD462B3568D5005F918E;
-			remoteInfo = WebdavDemo;
-		};
-		4DF9DD632B3568D7005F918E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DF9DD3F2B3568D5005F918E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DF9DD462B3568D5005F918E;
-			remoteInfo = WebdavDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D0538442B3C54F6000D4193 /* WebDAV+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebDAV+Image.swift"; sourceTree = "<group>"; };
@@ -69,11 +42,6 @@
 		4DF9DD4E2B3568D7005F918E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DF9DD502B3568D7005F918E /* WebdavDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebdavDemo.entitlements; sourceTree = "<group>"; };
 		4DF9DD522B3568D7005F918E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4DF9DD582B3568D7005F918E /* WebdavDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebdavDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DF9DD5C2B3568D7005F918E /* WebdavDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoTests.swift; sourceTree = "<group>"; };
-		4DF9DD622B3568D7005F918E /* WebdavDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebdavDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DF9DD662B3568D7005F918E /* WebdavDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoUITests.swift; sourceTree = "<group>"; };
-		4DF9DD682B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebdavDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,20 +50,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DF9DD772B357545005F918E /* SWXMLHash in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF9DD552B3568D7005F918E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF9DD5F2B3568D7005F918E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				4DF9DD492B3568D5005F918E /* WebdavDemo */,
-				4DF9DD5B2B3568D7005F918E /* WebdavDemoTests */,
-				4DF9DD652B3568D7005F918E /* WebdavDemoUITests */,
 				4DF9DD482B3568D5005F918E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,8 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				4DF9DD472B3568D5005F918E /* WebdavDemo.app */,
-				4DF9DD582B3568D7005F918E /* WebdavDemoTests.xctest */,
-				4DF9DD622B3568D7005F918E /* WebdavDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,23 +119,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4DF9DD5B2B3568D7005F918E /* WebdavDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				4DF9DD5C2B3568D7005F918E /* WebdavDemoTests.swift */,
-			);
-			path = WebdavDemoTests;
-			sourceTree = "<group>";
-		};
-		4DF9DD652B3568D7005F918E /* WebdavDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4DF9DD662B3568D7005F918E /* WebdavDemoUITests.swift */,
-				4DF9DD682B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift */,
-			);
-			path = WebdavDemoUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,42 +142,6 @@
 			productReference = 4DF9DD472B3568D5005F918E /* WebdavDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4DF9DD572B3568D7005F918E /* WebdavDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4DF9DD6F2B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoTests" */;
-			buildPhases = (
-				4DF9DD542B3568D7005F918E /* Sources */,
-				4DF9DD552B3568D7005F918E /* Frameworks */,
-				4DF9DD562B3568D7005F918E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4DF9DD5A2B3568D7005F918E /* PBXTargetDependency */,
-			);
-			name = WebdavDemoTests;
-			productName = WebdavDemoTests;
-			productReference = 4DF9DD582B3568D7005F918E /* WebdavDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4DF9DD612B3568D7005F918E /* WebdavDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4DF9DD722B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoUITests" */;
-			buildPhases = (
-				4DF9DD5E2B3568D7005F918E /* Sources */,
-				4DF9DD5F2B3568D7005F918E /* Frameworks */,
-				4DF9DD602B3568D7005F918E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4DF9DD642B3568D7005F918E /* PBXTargetDependency */,
-			);
-			name = WebdavDemoUITests;
-			productName = WebdavDemoUITests;
-			productReference = 4DF9DD622B3568D7005F918E /* WebdavDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -257,14 +154,6 @@
 				TargetAttributes = {
 					4DF9DD462B3568D5005F918E = {
 						CreatedOnToolsVersion = 15.0;
-					};
-					4DF9DD572B3568D7005F918E = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = 4DF9DD462B3568D5005F918E;
-					};
-					4DF9DD612B3568D7005F918E = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = 4DF9DD462B3568D5005F918E;
 					};
 				};
 			};
@@ -285,8 +174,6 @@
 			projectRoot = "";
 			targets = (
 				4DF9DD462B3568D5005F918E /* WebdavDemo */,
-				4DF9DD572B3568D7005F918E /* WebdavDemoTests */,
-				4DF9DD612B3568D7005F918E /* WebdavDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,20 +185,6 @@
 			files = (
 				4DF9DD532B3568D7005F918E /* Preview Assets.xcassets in Resources */,
 				4DF9DD4F2B3568D7005F918E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF9DD562B3568D7005F918E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF9DD602B3568D7005F918E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,44 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4DF9DD542B3568D7005F918E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DCB23A72B3C06880085FF2A /* WebDAV.swift in Sources */,
-				4D0ADF2F2B3D567A0068BC56 /* DriveModel.swift in Sources */,
-				4DCB23AF2B3C06880085FF2A /* WebDAVError.swift in Sources */,
-				4DCB23A92B3C06880085FF2A /* HTTPMethod.swift in Sources */,
-				4DF9DD5D2B3568D7005F918E /* WebdavDemoTests.swift in Sources */,
-				4DCB23B32B3C06880085FF2A /* WebDAVFile.swift in Sources */,
-				4D0ADF2C2B3D55220068BC56 /* DriveListModel.swift in Sources */,
-				4D4DFA262B36983F005D2819 /* FileListPage.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF9DD5E2B3568D7005F918E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DF9DD692B3568D7005F918E /* WebdavDemoUITestsLaunchTests.swift in Sources */,
-				4DF9DD672B3568D7005F918E /* WebdavDemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4DF9DD5A2B3568D7005F918E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4DF9DD462B3568D5005F918E /* WebdavDemo */;
-			targetProxy = 4DF9DD592B3568D7005F918E /* PBXContainerItemProxy */;
-		};
-		4DF9DD642B3568D7005F918E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4DF9DD462B3568D5005F918E /* WebdavDemo */;
-			targetProxy = 4DF9DD632B3568D7005F918E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4DF9DD6A2B3568D7005F918E /* Debug */ = {
@@ -522,11 +358,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 17.0;
 			};
 			name = Debug;
@@ -562,98 +398,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 17.0;
-			};
-			name = Release;
-		};
-		4DF9DD702B3568D7005F918E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebdavDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WebdavDemo";
-			};
-			name = Debug;
-		};
-		4DF9DD712B3568D7005F918E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebdavDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WebdavDemo";
-			};
-			name = Release;
-		};
-		4DF9DD732B3568D7005F918E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WebdavDemo;
-			};
-			name = Debug;
-		};
-		4DF9DD742B3568D7005F918E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.faichou.WebdavDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WebdavDemo;
 			};
 			name = Release;
 		};
@@ -674,24 +424,6 @@
 			buildConfigurations = (
 				4DF9DD6D2B3568D7005F918E /* Debug */,
 				4DF9DD6E2B3568D7005F918E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4DF9DD6F2B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DF9DD702B3568D7005F918E /* Debug */,
-				4DF9DD712B3568D7005F918E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4DF9DD722B3568D7005F918E /* Build configuration list for PBXNativeTarget "WebdavDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DF9DD732B3568D7005F918E /* Debug */,
-				4DF9DD742B3568D7005F918E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
