@@ -46,6 +46,14 @@ public class WebDAV: NSObject, URLSessionDelegate {
 }
 
 public extension WebDAV {
+    func ping() async -> Bool {
+        do {
+            let _ = try await listFiles(atPath: "/")
+            return true
+        } catch {
+            return false
+        }
+    }
     func listFiles(atPath path: String, foldersFirst: Bool = true, includeSelf: Bool = false) async throws -> [WebDAVFile] {
         guard var request = authorizedRequest(path: path, method: .propfind) else {
             throw WebDAVError.invalidCredentials
