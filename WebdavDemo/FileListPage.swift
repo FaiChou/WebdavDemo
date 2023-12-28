@@ -24,6 +24,8 @@ struct FileListPage: View {
                     } placeholder: {
                         Text(item.fileName)
                     }
+                } else if item.extension == "mp4" {
+                    VideoPlayerPage(file: item)
                 } else {
                     Text(item.fileName)
                 }
